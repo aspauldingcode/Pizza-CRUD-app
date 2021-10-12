@@ -4,14 +4,108 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="stylesheet.css" />
     <title>Document</title>
   </head>
   <body>
-    <h1>I AM A CRUD APPLICATION!</h1>
-    <p>I added this line!</p>
-    <p>Raymond's Line</p>
-    <h2>adam's test</h2>
+    <h1>Mama Mia! The Pizza App</h1>
 
+    <div class="container pizza-names">
+      <div class="row">
+        <div class="col">Name</div>
+        <div class="col">Crust</div>
+        <div class="col">Topping 1</div>
+        <div class="col">Topping 2</div>
+        <div class="col">Toping 3</div>
+        <div class="col">Sauce</div>
+        <div class="col">Price</div>
+        <div class="col"></div>
+        <div class="col"></div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="input-group input-group-sm mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-sm">Name</span>
+            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+          </div>
+        </div>
+        <div class="col"><div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            Crust
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item" href="#">Thin</a></li>
+            <li><a class="dropdown-item" href="#">Thick</a></li>
+            <li><a class="dropdown-item" href="#">Cheesy</a></li>
+          </ul>
+        </div></div>
+        <div class="col"><div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            Meat
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item" href="#">None</a></li>
+            <li><a class="dropdown-item" href="#">Pepperoni</a></li>
+            <li><a class="dropdown-item" href="#">Ham</a></li>
+            <li><a class="dropdown-item" href="#">Bacon</a></li>
+          </ul>
+        </div></div>
+        <div class="col"><div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            Veggies
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item" href="#">None</a></li>
+            <li><a class="dropdown-item" href="#">Mushrooms</a></li>
+            <li><a class="dropdown-item" href="#">Pineapple</a></li>
+            <li><a class="dropdown-item" href="#">Peppers</a></li>
+            <li><a class="dropdown-item" href="#">Jalapenos</a></li>
+          </ul>
+        </div></div>
+        <div class="col"><div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            Veggies
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item" href="#">None</a></li>
+            <li><a class="dropdown-item" href="#">Mushrooms</a></li>
+            <li><a class="dropdown-item" href="#">Pineapple</a></li>
+            <li><a class="dropdown-item" href="#">Peppers</a></li>
+            <li><a class="dropdown-item" href="#">Jalapenos</a></li>
+          </ul>
+        </div></div>
+        <div class="col"><div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            Sauce
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item" href="#">None</a></li>
+            <li><a class="dropdown-item" href="#">Red</a></li>
+            <li><a class="dropdown-item" href="#">White</a></li>
+            <li><a class="dropdown-item" href="#">Garlic</a></li>
+          </ul>
+          
+        </div></div>
+        <div class="col"><div class="input-group mb-3">
+          <span class="input-group-text">$</span>
+          <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+          <span class="input-group-text">.00</span>
+        </div></div>
+        <div class="col"></div>
+        <div class="col"></div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
     <script src="script.js"></script>
   </body>
 </html>

@@ -1,5 +1,9 @@
-/* testing */
+h1 {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 80px;
+}
 
-
-
-
+.pizza-names {
+  text-align: center;
+}
