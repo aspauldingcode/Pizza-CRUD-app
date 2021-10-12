@@ -4,6 +4,10 @@ h1 {
   margin-bottom: 80px;
 }
 
+.add-pizza-button {
+  margin: 0 0 40px 85px;
+}
+
 .pizza-names {
   text-align: center;
 }
