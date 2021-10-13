@@ -11,3 +11,7 @@ h1 {
 .pizza-names {
   text-align: center;
 }
+
+th.coolclass {
+  color: #1616d6;
+}
