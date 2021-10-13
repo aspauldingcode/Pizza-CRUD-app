@@ -11,12 +11,15 @@
   <title>Document</title>
 </head>
 <body>
+  <br>
+  <br>
+  <br>
   <!-- Container with Bootstrap table -->
   <div class="container">
     <table class="table">
       <thead>
         <tr>
-          <th scope="col">Order #</th>
+          <th class="CoolClass" scope="col">Order #</th>
           <th scope="col">Size</th>
           <th scope="col">Sauce</th>
           <th scope="col">Meat Toppings</th>
@@ -27,7 +30,11 @@
       <tbody>
         <tr>
           <th scope="row">1</th>
-          <td>Small</td>
+          <td><ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item" href="#">Small</a></li>
+            <li><a class="dropdown-item" href="#">Medium</a></li>
+            <li><a class="dropdown-item" href="#">Large</a></li>
+          </ul></td>
           <td>Tomato</td>
           <td>Pepperoni</td>
           <td>None</td>
