@@ -1,0 +1,19 @@
+{
+  "name": "fet-crud-pizza",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aspauldingcode/Pizza-CRUD-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aspauldingcode/Pizza-CRUD-app/issues"
+  },
+  "homepage": "https://github.com/aspauldingcode/Pizza-CRUD-app#readme"
+}
