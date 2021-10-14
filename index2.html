@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href= "/assets/crud2.css"
+    <link rel="stylesheet" href= "node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+
+<body>
+    <h1>This Pizza is CRUDelicious</h1>
+    
+    <br>
+    <div id="orderTable">
+        <table>
+            <tr>
+                <td>
+                    <form autocomplete="off" onsubmit="onFormSubmit()">
+                        <div>
+                            <label for="size">Size</label>
+                            <select style="width: 280px" id="size" name="size">
+                                <option selected="">Please Select</option>
+                                <option>Small</option>
+                                <option>Medium</option>
+                                <option>Large</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="sauce">Sauce</label>
+                            <select style="width: 280px" id="sauce" name="sauce">
+                                <option selected="">Please Select</option>
+                                <option>Classic Tomato</option>
+                                <option>Fresh Pesto</option>
+                                <option>Spicy Buffalo</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="meatToppings">Meat Toppings</label>
+                            <select style="width: 280px" id="meatToppings" name="meatToppings">
+                                <option selected="">Please Select</option>
+                                <option>None</option>
+                                <option>Pepperoni</option>
+                                <option>Sausage</option>
+                                <option>Hawaiian Ham</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="vegToppings">Veggie Toppings</label>
+                            <select style="width: 280px" id="vegToppings" name="vegToppings">
+                                <option selected="">Please Select</option>
+                                <option>None</option>
+                                <option>Green Peppers</option>
+                                <option>Olives</option>
+                                <option>Pineapple</option>
+                            </select>
+                        </div>
+                        <!-- <div id="counter"></div> -->
+    
+                        <div class="form_action--button">
+                            <input type="submit" value="Create Pizza">
+                            <input type="reset" value="Reset">
+                        </div>
+                    </form>
+    
+                <td>
+                    <table class="list" id="pizzaList">
+                        <thead>
+                            <tr>
+                                <th>Size</th>
+                                <th>Sauce</th>
+                                <th>Meat Toppings</th>
+                                <th>Veggie Toppings</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+    
+                        </tbody>
+                    </table>
+                </td>
+                </td>
+            </tr>
+        </table> 
+    </div>
+
+
+    <!-- <div class="progress">
+        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+    </div> -->
+
+    <script src="/app/crud2.js"></script>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>
