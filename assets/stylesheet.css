@@ -23,4 +23,13 @@ div.styled {
   border: 7px solid #217aad;
 }
 
+div.progress, div.order {
+  text-align: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+body {
+  background-color: aliceblue;
+}
 /* add styling for index.html */
