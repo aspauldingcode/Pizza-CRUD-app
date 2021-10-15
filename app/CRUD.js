@@ -1,87 +1,72 @@
 
-//implement html text replacements
-let orderID  = document.getElementById('ID')
-let pizzaSize = document.getElementById('size')
-let pizzaSauce = document.getElementById('sauce')
-let pizzaMeat = document.getElementById('meat')
-let pizzaVeggies = document.getElementById('veggies')
-let pizzaPrice = document.getElementById('price')
-
-// Order ID
-
-// let changeID = (e) => {
-//   console.log(e);
-//   let size = e.innerText
-//   console.log("replaced size text")
-//   pizzaSize.innerHTML = size
-//   return 'Small';
-// }
-
-// pizza Size
-let selectSize = (e) => {
-  console.log(e);
-  let size = e.innerText
-  console.log("Selected Pizza Size")
-  pizzaSize.innerHTML = size
+var selectedRow = null;
+function onFormSubmit(e) {
+    event.preventDefault();
+    var formData = readFormData();
+    if (selectedRow === null) {
+        insertNewRecord(formData);
+    }
+    else {
+        updateRecord(formData);
+    }
+    resetForm();
 }
 
-// pizza Sauce
-let selectSauce = (e) => {
-  console.log(e);
-  let sauce = e.innerText
-  console.log("Selected Sauce Type")
-  pizzaSauce.innerHTML = sauce
+//Retrieve the data
+function readFormData() {
+    var formData = {};
+    formData["size"] = document.getElementById("size").value;
+    formData["sauce"] = document.getElementById("sauce").value;
+    formData["meatToppings"] = document.getElementById("meatToppings").value;
+    formData["vegToppings"] = document.getElementById("vegToppings").value;
+    return formData;
 }
 
-// meat Toppings
-let selectMeat = (e) => {
-  console.log(e);
-  let meat = e.innerText
-  console.log("Selected Meat Toppings")
-  pizzaMeat.innerHTML = meat
+//Insert the data
+function insertNewRecord(data) {
+    var table = document.getElementById("pizzaList").getElementsByTagName('tbody')[0];
+    var newRow = table.insertRow(table.length);
+    var cell1 = newRow.insertCell(0);
+    cell1.innerHTML = data.size;
+    var cell2 = newRow.insertCell(1);
+    cell2.innerHTML = data.sauce;
+    var cell3 = newRow.insertCell(2);
+    cell3.innerHTML = data.meatToppings;
+    var cell4 = newRow.insertCell(3);
+    cell4.innerHTML = data.vegToppings;
+    var cell5 = newRow.insertCell(4);
+    cell5.innerHTML = `<button onClick='onEdit(this)'>Edit</button> <button onClick='onDelete(this)'>Delete</button>`
 }
 
-// veggie Toppings
-let selectVeggies = (e) => {
-  console.log(e);
-  let veggies = e.innerText
-  console.log("Selected Meat Toppings")
-  pizzaVeggies.innerHTML = veggies
+//Edit the data
+function onEdit(td) {
+    selectedRow = td.parentElement.parentElement;
+    document.getElementById('size').value = selectedRow.cells[0].innerHTML;
+    document.getElementById('sauce').value = selectedRow.cells[1].innerHTML;
+    document.getElementById('meatToppings').value = selectedRow.cells[2].innerHTML;
+    document.getElementById('vegToppings').value = selectedRow.cells[3].innerHTML;
 }
-// pizza Price
 
+function updateRecord(formData) {
+    selectedRow.cells[0].innerHTML = formData.size;
+    selectedRow.cells[1].innerHTML = formData.sauce;
+    selectedRow.cells[2].innerHTML = formData.meatToppings;
+    selectedRow.cells[3].innerHTML = formData.vegToppings;
+}
 
-console.log(size);
-// console.log(orderID);
-// console.log(orderID.value);
+//Delete the data
+function onDelete(td) {
+    if (confirm('Remove Pizza?')) {
+        row = td.parentElement.parentElement;
+        document.getElementById('pizzaList').deleteRow(row.rowIndex);
+    }
+    resetForm();
+}
 
-// getRandomCards = () => {
-// let myCard = myRandomCard();
-// let enemyCard = enemyRandomCard();
- 
-//   if(myCard > enemyCard) {
-//   console.log('I win')
-//   } else {
- 
-//   }
-// }
-
-// // Order ID
-// orderID = () => {
-//   let array = ['Ace', 'King', 'Queen', 'Jack', 10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
-//   let arrayLocation = Math.floor(Math.random(0, 14) * 10)
-//   let outputCard = array[arrayLocation]
-//   console.log(outputCard)
-//   myOutput.innerHTML = array[arrayLocation]
-//   return outputCard;
-// }
-
-// // pizza Size
-// enemyRandomCard = () => {
-//   let array = ['Ace', 'King', 'Queen', 'Jack', 10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
-//   let arrayLocation = Math.floor(Math.random(0, 14) * 10)
-//   let outputCard = array[arrayLocation]
-//   console.log(outputCard)
-//   enemyOutput.innerHTML = array[arrayLocation]
-//   return outputCard;
-// }
+//Reset the data
+function resetForm() {
+    document.getElementById('size').value = 'Please Select';
+    document.getElementById('sauce').value = 'Please Select';
+    document.getElementById('meatToppings').value = 'Please Select';
+    document.getElementById('vegToppings').value = 'Please Select';
+}

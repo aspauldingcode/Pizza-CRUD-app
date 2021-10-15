@@ -23,7 +23,7 @@ div.styled {
   border: 7px solid #217aad;
 }
 
-div.progress, div.order {
+div.progress, div.order, .center {
   text-align: center;
   max-width: 1200px;
   margin: auto;
