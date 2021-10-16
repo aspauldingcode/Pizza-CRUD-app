@@ -1,5 +1,9 @@
 
 var selectedRow = null;
+
+// reset form on page load
+resetForm();
+
 function onFormSubmit(e) {
     event.preventDefault();
     var formData = readFormData();
@@ -10,6 +14,12 @@ function onFormSubmit(e) {
         updateRecord(formData);
     }
     resetForm();
+    
+    if (document.getElementById('customerName').value === 'Enter Your Name') {
+      console.log('ew');
+    } else {
+      console.log('ahhh');
+    }
 }
 
 //Retrieve the data
@@ -70,7 +80,7 @@ function onDelete(td) {
 
 //Reset the data
 function resetForm() {
-    document.getElementById('customerName').value = '';
+    document.getElementById('customerName').value = 'Enter Your Name';
     document.getElementById('size').value = 'Please Select';
     document.getElementById('sauce').value = 'Please Select';
     document.getElementById('meatToppings').value = 'Please Select';
