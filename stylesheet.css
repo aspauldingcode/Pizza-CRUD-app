@@ -32,4 +32,11 @@ div.progress, div.order, .center {
 body {
   background-color: aliceblue;
 }
+
+img.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
 /* add styling for index.html */
