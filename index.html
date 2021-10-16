@@ -37,15 +37,15 @@
               <td>
                 <form autocomplete="off" onsubmit="onFormSubmit()">
                   <div class="row">
-                    <label for="customerName">Customer Name</label>
-                    <input type="text" name="customerName" id="customerName">
+                    <label id="customer" for="customerName">Customer Name</label>
+                    <input placeholder="Enter Your Name" type="text" name="customerName" id="customerName">
                   </div>
                   <br>
                   <div class="row">
                       <div class="col-sm-5 col-md-6"><label for="size">Size</label></div>
                       <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0">
                         <select style="width: 280px" id="size" name="size">
-                          <option selected="">Please Select</option>
+                          <option value="" disabled selected>Please Select</option>
                           <option>Small</option>
                           <option>Medium</option>
                           <option>Large</option>
@@ -55,7 +55,7 @@
                     <div class="col-sm-5 col-md-6"><label for="sauce">Sauce</label></div>
                     <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0">
                       <select style="width: 280px" id="sauce" name="sauce">
-                        <option selected="">Please Select</option>
+                        <option value="" disabled selected>Please Select</option>
                         <option>Classic Tomato</option>
                         <option>Fresh Pesto</option>
                         <option>Spicy Buffalo</option>
@@ -65,8 +65,8 @@
                     <div class="col-sm-5 col-md-6"><label for="meatToppings">Meat Toppings</label></div>
                     <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0">
                       <select style="width: 280px" id="meatToppings" name="meatToppings">
-                        <option selected="">Please Select</option>
-                        <option>None</option>
+                        <option value="" disabled selected>Please Select</option>
+                        <option selected="">None</option>
                         <option>Pepperoni</option>
                         <option>Sausage</option>
                         <option>Hawaiian Ham</option>
@@ -76,8 +76,8 @@
                     <div class="col-sm-5 col-md-6"><label for="vegToppings">Veggie Toppings</label></div>
                     <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0">
                       <select style="width: 280px" id="vegToppings" name="vegToppings">
-                        <option selected="">Please Select</option>
-                        <option>None</option>
+                        <option value="" disabled selected>Please Select</option>
+                        <option selected="">None</option>
                         <option>Green Peppers</option>
                         <option>Olives</option>
                         <option>Pineapple</option>
