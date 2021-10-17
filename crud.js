@@ -1,25 +1,23 @@
 
+
 var selectedRow = null;
 
-// reset form on page load
-resetForm();
-
 function onFormSubmit(e) {
-    event.preventDefault();
-    console.log(document.getElementById('customer' + 'before'));
-
-
-    //currently working on error features
-    var formData = readFormData();
-    if (selectedRow === null) {
-        console.log('error');
-    }
-    else {
-        updateRecord(formData);
-    }
-    resetForm();
+  event.preventDefault();
+  var formData = readFormData();
+  //currently working on error features
+  
+  // console.log(data.customerName);
+  // if (data.customerName === null) {
+  //   console.log('actual error');
+  // } else 
+  if (selectedRow === null) {
+    insertNewRecord(formData);0
+  } else {
+  updateRecord(formData);
+  }
+  resetForm();
 }
-console.log(document.getElementById('customer'));
 
 //Retrieve the data
 function readFormData() {
